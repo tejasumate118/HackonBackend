@@ -1,4 +1,4 @@
-package com.fourloop.hackon_backend.repo;
+package com.fourloop.hackon_backend.repository;
 
 import com.fourloop.hackon_backend.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
