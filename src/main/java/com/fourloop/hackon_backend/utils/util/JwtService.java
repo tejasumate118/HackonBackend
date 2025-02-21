@@ -76,7 +76,7 @@ public class JwtService {
         if (rolesObject instanceof List<?> rolesList) {
             return rolesList.stream()
                     .map(Object::toString)
-                    .map(role -> new SimpleGrantedAuthority("ROLE_" + role)) // Add "ROLE_" prefix
+                    .map(SimpleGrantedAuthority::new) // Add "ROLE_" prefix
                     .collect(Collectors.toList());
         }
         return new ArrayList<>();

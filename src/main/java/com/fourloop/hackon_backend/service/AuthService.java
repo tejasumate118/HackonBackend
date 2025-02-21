@@ -68,8 +68,7 @@ public class AuthService {
         User user1 = new User();
         user1.setName(signUpRequest.name());
         user1.setEmail(signUpRequest.email());
-        String placeholderPassword = "temporaryPassword"; // You can use a random password or generate it
-        user1.setPassword(passwordEncoder.encode(placeholderPassword));
+        user1.setPassword(passwordEncoder.encode(signUpRequest.password()));
 
         User saveUser = userRepository.save(user1);
 

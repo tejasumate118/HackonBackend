@@ -15,7 +15,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+        return List.of(() -> user.getRole().name());
     }
 
     @Override
@@ -25,12 +25,12 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public String getUsername() {
-        return "";
+        return user.getEmail();
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;
     }
 
     @Override

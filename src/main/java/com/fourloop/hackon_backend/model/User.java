@@ -3,7 +3,7 @@ package com.fourloop.hackon_backend.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="User")
+@Table(name="users")
 public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
