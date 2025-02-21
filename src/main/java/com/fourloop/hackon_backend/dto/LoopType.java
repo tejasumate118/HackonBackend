@@ -1,4 +1,4 @@
-package com.fourloop.hackon.backend.dto;
+package com.fourloop.hackon_backend.dto;
 
 import java.util.List;
 
